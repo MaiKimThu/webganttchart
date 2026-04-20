@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gantt Chart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="font-sans antialiased">
+
+    <div class="max-w-[1400px] mx-auto p-4 md:p-10">
+        <header
+            class="mb-10 flex flex-col md:flex-row md:items-center justify-between gap-6 border-l-4 border-[#2F2FE4] pl-6">
+            <div>
+                <h1 class="text-4xl font-black tracking-tight text-white">BIỂU ĐỒ GÂY QUỸ 2026</h1>
+                <p class="text-slate-400 mt-1 font-medium">Tháng 4/2026 </p>
+            </div>
+            <div class="flex flex-wrap gap-4 bg-[#111026] p-4 rounded-2xl shadow-lg border border-white/5">
+                <div class="flex items-center gap-2"><span
+                        class="w-3 h-3 rounded-full bg-[#2F2FE4] shadow-[0_0_8px_#2F2FE4]"></span><span
+                        class="text-[0.65rem] font-bold uppercase tracking-wider text-slate-300">Chuẩn bị</span></div>
+                <div class="flex items-center gap-2"><span
+                        class="w-3 h-3 rounded-full bg-[#162E93] shadow-[0_0_8px_#162E93]"></span><span
+                        class="text-[0.65rem] font-bold uppercase tracking-wider text-slate-300">Truyền thông</span>
+                </div>
+                <div class="flex items-center gap-2"><span
+                        class="w-3 h-3 rounded-full bg-[#1A1953] shadow-[0_0_8px_#1A1953]"></span><span
+                        class="text-[0.65rem] font-bold uppercase tracking-wider text-slate-300">Vận hành</span></div>
+                <div class="flex items-center gap-2"><span
+                        class="w-3 h-3 rounded-full bg-[#2a2a4a] shadow-[0_0_8px_#ffffff22]"></span><span
+                        class="text-[0.65rem] font-bold uppercase tracking-wider text-slate-300">Tổng kết</span></div>
+            </div>
+        </header>
+
+        <div class="bg-[#111026] rounded-2xl shadow-2xl border border-white/5 overflow-visible">
+            <div class="overflow-x-auto">
+                <div class="min-w-[1200px] pb-16">
+                    <div class="gantt-grid bg-[#1a1935] border-b border-white/10 sticky top-0 z-30 backdrop-blur-xl">
+                        <div
+                            class="p-5 font-bold text-blue-300 uppercase tracking-widest text-[0.7rem] border-r border-white/10 bg-[#1a1935]">
+                            Hạng mục công việc</div>
+                        <div class="day-header"><b>T2</b><br>01</div>
+                        <div class="day-header"><b>T3</b><br>02</div>
+                        <div class="day-header"><b>T4</b><br>03</div>
+                        <div class="day-header"><b>T5</b><br>04</div>
+                        <div class="day-header"><b>T6</b><br>05</div>
+                        <div class="day-header"><b>T7</b><br>06</div>
+                        <div class="day-header sunday text-red-400"><b>CN</b><br>07</div>
+                        <div class="day-header"><b>T2</b><br>08</div>
+                        <div class="day-header"><b>T3</b><br>09</div>
+                        <div class="day-header"><b>T4</b><br>10</div>
+                        <div class="day-header"><b>T5</b><br>11</div>
+                        <div class="day-header"><b>T6</b><br>12</div>
+                        <div class="day-header"><b>T7</b><br>13</div>
+                        <div class="day-header sunday text-red-400"><b>CN</b><br>14</div>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute inset-0 gantt-grid pointer-events-none">
+                            <div class="border-r border-white/10"></div>
+                            <div class="border-r border-white/5"></div>
+                            <div class="border-r border-white/5"></div>
+                            <div class="border-r border-white/5"></div>
+                            <div class="border-r border-white/5"></div>
+                            <div class="border-r border-white/5"></div>
+                            <div class="border-r border-white/5"></div>
+                            <div class="border-r border-white/5 sunday"></div>
+                            <div class="border-r border-white/5"></div>
+                            <div class="border-r border-white/5"></div>
+                            <div class="border-r border-white/5"></div>
+                            <div class="border-r border-white/5"></div>
+                            <div class="border-r border-white/5"></div>
+                            <div class="border-r border-white/5"></div>
+                            <div class="sunday"></div>
+                        </div>
+
+                        <div class="task-row">
+                            <div class="task-name">Poster Design</div>
+                            <div class="timeline-container">
+                                <div class="bar bg-p-light" style="left: calc(0 * 7.14%); width: calc(3 * 7.14%);">
+                                    Thiết kế visual
+                                    <div class="tooltip">
+                                        <b>Poster Design</b>
+                                        <span>Thời gian: 01/04 - 03/04</span>
+                                        <i>Ghi chú: Thiết kế visual + nội dung gây quỹ</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="task-row">
+                            <div class="task-name">Printing Materials</div>
+                            <div class="timeline-container">
+                                <div class="bar bg-p-light" style="left: calc(1 * 7.14%); width: calc(3 * 7.14%);">
+                                    In ấn tài liệu
+                                    <div class="tooltip">
+                                        <b>Printing Materials</b>
+                                        <span>Thời gian: 02/04 - 04/04</span>
+                                        <i>Ghi chú: In poster A0 + tài liệu</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="task-row">
+                            <div class="task-name">Sales Permitting</div>
+                            <div class="timeline-container">
+                                <div class="bar bg-p-light" style="left: calc(1 * 7.14%); width: calc(2 * 7.14%);">
+                                    Xin phép UEF
+                                    <div class="tooltip">
+                                        <b>Sales Permitting</b>
+                                        <span>Thời gian: 02/04 - 03/04</span>
+                                        <i>Ghi chú: Xin phép bán tại UEF</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="task-row">
+                            <div class="task-name">Product Procurement</div>
+                            <div class="timeline-container">
+                                <div class="bar bg-p-light" style="left: calc(2 * 7.14%); width: calc(2 * 7.14%);">
+                                    Nhận hàng & Kiểm tra
+                                    <div class="tooltip">
+                                        <b>Product Procurement</b>
+                                        <span>Thời gian: 03/04 - 04/04</span>
+                                        <i>Ghi chú: Nhận hàng + kiểm tra</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="task-row">
+                            <div class="task-name">Revenue Tracking Setup</div>
+                            <div class="timeline-container">
+                                <div class="bar bg-p-light" style="left: calc(2 * 7.14%); width: calc(3 * 7.14%);">
+                                    Setup hệ thống
+                                    <div class="tooltip">
+                                        <b>Revenue Tracking Setup</b>
+                                        <span>Thời gian: 03/04 - 05/04</span>
+                                        <i>Ghi chú: Setup file theo dõi doanh thu</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="task-row">
+                            <div class="task-name">Teaser Post</div>
+                            <div class="timeline-container">
+                                <div class="bar bg-p-medium" style="left: calc(3 * 7.14%); width: calc(1 * 7.14%);">
+                                    Teaser Post
+                                    <div class="tooltip">
+                                        <b>Teaser Post</b>
+                                        <span>Thời gian: 04/04</span>
+                                        <i>Ghi chú: Đăng bài announce</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="task-row">
+                            <div class="task-name">Communication Launch</div>
+                            <div class="timeline-container">
+                                <div class="bar bg-p-medium" style="left: calc(5 * 7.14%); width: calc(1 * 7.14%);">
+                                    Launch Chiến dịch
+                                    <div class="tooltip">
+                                        <b>Communication Launch</b>
+                                        <span>Thời gian: 06/04</span>
+                                        <i>Ghi chú: Đăng bài + truyền thông</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="task-row">
+                            <div class="task-name">Booth Setup & Merchandising</div>
+                            <div class="timeline-container">
+                                <div class="bar bg-p-dark" style="left: calc(5 * 7.14%); width: calc(1 * 7.14%);">
+                                    Setup Gian hàng
+                                    <div class="tooltip">
+                                        <b>Booth Setup & Merchandising</b>
+                                        <span>Thời gian: 06/04</span>
+                                        <i>Ghi chú: Setup gian hàng</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="task-row">
+                            <div class="task-name">Sales @ UEF (Morning/Afternoon)</div>
+                            <div class="timeline-container">
+                                <div class="bar bg-p-dark" style="left: calc(5 * 7.14%); width: calc(1 * 7.14%);">
+                                    Bán hàng ca Sáng/Chiều
+                                    <div class="tooltip">
+                                        <b>Sales – Morning & Afternoon Shift</b>
+                                        <span>Thời gian: 06/04</span>
+                                        <i>Sáng: 7:30 – 11:00 <br>Chiều: 13:30 – 17:00</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="task-row">
+                            <div class="task-name">Revenue Recap</div>
+                            <div class="timeline-container">
+                                <div class="bar bg-p-black" style="left: calc(5.8 * 7.14%); width: calc(0.2 * 7.14%);">
+                                    Recap
+                                    <div class="tooltip">
+                                        <b>Revenue Recap</b>
+                                        <span>Thời gian: 06/04 (Cuối ngày)</span>
+                                        <i>Ghi chú: Tổng kết doanh thu cuối ngày</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="task-row">
+                            <div class="task-name">Rest & Internal Review</div>
+                            <div class="timeline-container">
+                                <div class="bar bg-p-black" style="left: calc(6 * 7.14%); width: calc(2 * 7.14%);">
+                                    Review & Nghỉ ngơi
+                                    <div class="tooltip">
+                                        <b>Rest & Internal Review</b>
+                                        <span>Thời gian: 07/04 - 08/04</span>
+                                        <i>Ghi chú: Nghỉ + đánh giá sơ bộ</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="task-row">
+                            <div class="task-name">Preparation for Expansion</div>
+                            <div class="timeline-container">
+                                <div class="bar bg-p-dark" style="left: calc(7 * 7.14%); width: calc(2 * 7.14%);">
+                                    Chuẩn bị bán ngoài
+                                    <div class="tooltip">
+                                        <b>Preparation for Expansion</b>
+                                        <span>Thời gian: 08/04 - 09/04</span>
+                                        <i>Ghi chú: Chuẩn bị bán ngoài</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="task-row">
+                            <div class="task-name">Announcement Posts</div>
+                            <div class="timeline-container">
+                                <div class="bar bg-p-medium" style="left: calc(9 * 7.14%); width: calc(1 * 7.14%);">
+                                    Post Địa điểm mới
+                                    <div class="tooltip">
+                                        <b>Announcement Posts</b>
+                                        <span>Thời gian: 10/04</span>
+                                        <i>Ghi chú: Truyền thông cho 2 địa điểm</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="task-row">
+                            <div class="task-name">Off-site Preparation</div>
+                            <div class="timeline-container">
+                                <div class="bar bg-p-dark" style="left: calc(9 * 7.14%); width: calc(2 * 7.14%);">
+                                    Chuẩn bị Off-site
+                                    <div class="tooltip">
+                                        <b>Off-site Preparation</b>
+                                        <span>Thời gian: 10/04 - 11/04</span>
+                                        <i>Ghi chú: Chuẩn bị hàng + nhân sự</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="task-row">
+                            <div class="task-name">Sales @ Off-site</div>
+                            <div class="timeline-container">
+                                <div class="bar bg-p-dark" style="left: calc(11 * 7.14%); width: calc(1 * 7.14%);">
+                                    Bán lưu động (Park & Church)
+                                    <div class="tooltip">
+                                        <b>Sales Off-site</b>
+                                        <span>Thời gian: 12/04</span>
+                                        <i>Ghi chú: <br>- Công viên 30/4 (6:30 – 10:00) <br>- Nhà thờ Hòa Bình (7:00 –
+                                            19:00)</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="task-row">
+                            <div class="task-name">Data Collection</div>
+                            <div class="timeline-container">
+                                <div class="bar bg-p-black" style="left: calc(11 * 7.14%); width: calc(2 * 7.14%);">
+                                    Thu thập dữ liệu
+                                    <div class="tooltip">
+                                        <b>Data Collection</b>
+                                        <span>Thời gian: 12/04 - 13/04</span>
+                                        <i>Ghi chú: Thu thập dữ liệu</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="task-row">
+                            <div class="task-name">Final Report & Evaluation</div>
+                            <div class="timeline-container">
+                                <div class="bar bg-p-black" style="left: calc(12 * 7.14%); width: calc(2 * 7.14%);">
+                                    Tổng kết chiến dịch
+                                    <div class="tooltip">
+                                        <b>Final Report & Evaluation</b>
+                                        <span>Thời gian: 13/04 - 14/04</span>
+                                        <i>Ghi chú: Tổng kết chiến dịch</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="mt-8 flex items-center justify-between text-slate-500">
+            <p class="text-sm italic tracking-wide text-blue-400/60">* Di chuyển chuột để xem dữ liệu.
+            </p>
+            <p class="text-[0.65rem] uppercase font-bold tracking-widest text-slate-600">tên nhóm</p>
+        </footer>
+    </div>
+
+</body>
+
+</html>
